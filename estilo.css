@@ -1,38 +1,35 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-  margin: 0;
-  font-family: Arial;
-  background-color: red;
-  color: black;
-}
+/*------------------------
+Estilos para el header 
+-------------------------*/
 
 .header {
+  display: flex;
   text-align: center;
   padding: 32px;
 }
+/*------------------------
+Estilos para el menu
+-------------------------*/
+.menu{
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
 }
-
-img {
-  max-width: 33%;
-}
-
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
+/*------------------------
+Estilos para monitor grande
+-------------------------*/
+ @media (max-width: 600px) {
+.container{
+  display: grid;
+  /*cuatro filas y tres columnas por ahora*/
+  grid-template: auto auto auto auto auto auto / auto;
+  grid-template-areas:"encabezado"
+                      "menu-bar menu-bar"
+                      "producto"
+                      "izquierdo"
+                      "derecho"
+                      "pie";
 }
 
 @media screen and (max-width: 992px) {
@@ -57,3 +54,36 @@ img {
     max-width: 100%;
   }
 }
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: red;
+ Ho color: black;
+}
+
+/*------------------------
+revisar
+-------------------------*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+img {
+  max-width: 33%;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+

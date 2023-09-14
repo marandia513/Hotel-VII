@@ -1,0 +1,47 @@
+
+
+body{
+    background-color: rgb(175, 175, 185);
+}
+header{
+
+    background-color: lightsteelblue;
+    color: darkslateblue;
+}
+/* Estilos para cada elemento de la lista*/
+.container {
+    background-color: rgb(101, 93, 149);
+    color: rgb(157, 169, 230);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 10px solid #ccc;
+    border-radius: 1px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+   
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="number"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #543ac8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
