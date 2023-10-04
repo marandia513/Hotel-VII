@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilof.css">
+</head>
+
+<body>
+    </head>
+    <header>
+        <h1>
+            RESERVAS HVII
+        </h1>
+    </header>
+    <div class="container">
+        <fieldset>
+           <legend>Tipos de habitaciones</legend>
+            <form action="#" >
+                
+                <select name="habitacion" id="habitacion">
+                    <option value="1">Habitación presidencial</option>
+                    <option value="2"> Habitación classic</option>
+                    <option value="3"> Habitación standar familiar</option>
+                </select>
+            </form>
+                        
+        </fieldset>
+        <fieldset>
+            <legend>Datos personales</legend>
+           
+
+ 
+<form action="datos.html" target="_blank">
+
+    <label for="nombre">Nombre y Apellido:</label>
+    <input type="text" id="nombre" name="nombre">
+    
+    <input type="text" onkeypress="mayus(this);">
+    <label for="mail">Mail:</label>
+    <input type="email" id="mail" name="mail"  required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+
+    <label for="contacto">Contacto:</label>
+    <input type="tel" id="contacto" name="contacto" required>
+
+    <label for="fecha_ingreso">Fecha de Ingreso:</label>
+    <input type="date" id="fecha_ingreso" name="fecha_ingreso" required>
+
+    <label for="fecha_egreso">Fecha de Egreso:</label>
+    <input type="date" id="fecha_egreso" name="fecha_egreso" required>
+
+    <label for="adultos">Cantidad de Adultos:</label>
+    <input type="number" id="adultos" name="adultos" required>
+
+    <label for="menores">Cantidad de Menores de 12 años:</label>
+    <input type="number" id="menores" name="menores" required>
+            </fieldset>
+        <br><br>
+        <button type="submit">Enviar Reserva</button>
+        <button type="reset">Borrar</button>
+        <br><br>
+        <a href="index.html">Volver</a>
+        </form>
+    </div>
+   
+    <script>
+        // Obtener referencias a los campos de fecha
+        var fechaIngreso = document.getElementById("fecha_ingreso");
+        var fechaEgreso = document.getElementById("fecha_egreso");
+    
+        // Agregar un evento de cambio al campo de fecha de ingreso
+        fechaIngreso.addEventListener("change", function () {
+            // Establecer la fecha mínima en el campo de fecha de egreso como la fecha seleccionada en el campo de fecha de ingreso
+            fechaEgreso.min = fechaIngreso.value;
+        });
+    </script>
+    <script>
+        // Obtener referencias a los campos de fecha
+        var fechaIngreso = document.getElementById("fecha_ingreso");
+        var fechaEgreso = document.getElementById("fecha_egreso");
+    
+        // Obtener la fecha actual en formato ISO
+        var fechaActual = new Date().toISOString().split("T")[0];
+    
+        // Establecer la fecha mínima en el campo de fecha de ingreso como la fecha actual
+        fechaIngreso.min = fechaActual;
+    
+        // Agregar un evento de cambio al campo de fecha de ingreso
+        fechaIngreso.addEventListener("change", function () {
+            // Establecer la fecha mínima en el campo de fecha de egreso como la fecha seleccionada en el campo de fecha de ingreso
+            fechaEgreso.min = fechaIngreso.value;
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

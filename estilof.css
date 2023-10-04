@@ -3,15 +3,11 @@
 */
 body{
     background-color: #8291A3;
-
 }
 header{
-
     background-color: #5695CE;
     color: #1E2B3D;
-    font-size: 15px;
-   
-   
+    font-size: 15px; 
 }
 /* Estilos para cada elemento de la lista*/
 /*agregue tipo d eletra*/
@@ -25,8 +21,7 @@ header{
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    font-style: italic;
-   
+    font-style: italic; 
 }
 
 select {
@@ -38,8 +33,7 @@ select {
     margin-bottom: 10px;
     border: 1px solid #CBBBA1;
     border-radius: 5px;
-    
-
+   
 }
 
 label {
@@ -47,7 +41,6 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
     font-style: normal;
-    
    
    
 }
@@ -83,8 +76,8 @@ a {
     background-color: #304562;
     color:#F7ECCF ;
     border: none;
-    border-radius: 15px;
-    padding: 50px 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 15px; 
     display: flex;
@@ -111,27 +104,30 @@ a {
 
 }
 .table {
-   
-    border: #CBBBA1 10%;
-border-collapse: collapse; 
-width: 20px; 
+text-align: center;   
+border-collapse: collapse; /*opcion de borde para una apraciencia más limpia*/
+width: 100%; 
+height: 100%;
 background-color: #ccc;
-text-align: justify;
-vertical-align: auto; 
-padding: 15%; 
-margin: 5px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: large;
+}
+.th, td {
+    border: 1px solid #304562; /* Establece un borde sólido de 1 píxel de ancho y color negro */
+    padding: 10px; /* Añade un espacio de relleno alrededor del contenido de las celdas */
+  }
 
+.texto {
+    text-align: center;
+    padding: auto;   
+  font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-style: italic; 
 }
-.a {
-    background-color: #304562;
-    color:#F7ECCF ;
-    border: none;
-    border-radius: 15px;
-    padding: 10px 10px;
-    cursor: pointer;
-    font-size: 15px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     
+.footer {
+   	background-color: #8291A3;
+	color: #0f0e0e;
+	text-align: center;
+	padding: 5px;
 }
+
