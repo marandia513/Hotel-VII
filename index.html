@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>HOTEL VII Villa La Angostura</title>
+    <meta charset="UTF-8">
+    <title>HOTEL VII Villa La Angostura</title>
+    <!-- Fuentes de Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Estilos del carrusel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- Bibliotecas JavaScript para el carrusel -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Iconos Font Awesome -->
+    <script src="https://kit.fontawesome.com/dfe49f8610.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <!-- Tu script personalizado -->
+    <script type="text/javascript" src="carousel.js"></script>
+	 <!-- Enlaces a hojas de estilo -->
 	<link rel="stylesheet" href="stylesheet.css">
-	<!--Agregue fonst MONTSERRAT-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<!--agregue el tipo de letra -->
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-		rel="stylesheet">
-
-	<script src="https://kit.fontawesome.com/dfe49f8610.js" crossorigin="anonymous"></script>
-	<!--
-	agregado de botón flotate
--->
-	<script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-
 </head>
-
 <body>
-
 	<div class="parent">
-
 		<div class="logo">logo</div>
 		<div class="encabezado">
 			<h1>
@@ -32,12 +31,9 @@
 			</h1>
 		</div>
 		<div class="login">login</div>
-
-
 		<div class="nav">
 			<nav>
 				<h2>
-
 					<a class='list' href="#1">Sobre HVII</a> <strong></strong>
 					<a class='list' href="#2">Habitaciones</a> <strong></strong>
 					<a class='list' href="#3">Restaurantes</a> <strong></strong>
@@ -45,12 +41,37 @@
 					<a class='list' href="#5">Eventos y Salones</a> <strong></strong>
 					<a class='list' href="#6">Contacto</a>
 					<a class='list' href="formulario.html">Reservas</a>
-
 				</h2>
 			</nav>
 		</div>
-
-
+		<div class="carusel">
+			<div class="cualquiera">
+				<button id="prevButton">Anterior</button>
+					<div>
+						<div class="carousel-container">
+							<div class="carousel-slide">
+								<img src="img/spa/01.jpg" alt="Imagen 01">
+							</div>
+							<div class="carousel-slide">
+								<img src="img/spa/02.jpg" alt="Imagen 02">
+							</div>
+							<div class="carousel-slide">
+								<img src="img/spa/03.jpg" alt="Imagen 03">
+							</div>
+							<div class="carousel-slide">
+								<img src="img/spa/04.jpg" alt="Imagen 04">
+							</div>
+							<div class="carousel-slide">
+								<img src="img/spa/05.jpg" alt="Imagen 05">
+							</div>
+							<div class="carousel-slide">
+								<img src="img/spa/06.jpg" alt="Imagen 06">
+							</div>
+						</div>
+					</div>
+				<button id="nextButton">Siguiente</button>
+			</div>
+		</div>
 		<div class="encabezado1">
 			<article>
 				<br>
@@ -65,7 +86,6 @@
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.1928260560558!2d-71.67737932326342!3d-40.73578237139018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610bf42e48faabd%3A0x9fc18433210dbd85!2sCorrentoso%20Lake%20%26%20River%20Hotel!5e0!3m2!1ses-419!2ses!4v1695338929045!5m2!1ses-419!2ses"
 				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
 				referrerpolicy="no-referrer-when-downgrade"></iframe>
-
 		</div>
 		<div class="item1">
 			<article id="2">
@@ -78,12 +98,9 @@
 					incluso los gustos más exigentes.</p><br>
 			</article>
 		</div>
-
 		<div class="detalle1">
 			detalle1
 		</div>
-
-
 		<div class="item2">
 			<article id="3">
 				<br>
@@ -94,12 +111,9 @@
 					una experiencia sensorial que refleja la pasión por la excelencia culinaria.</p><br>
 			</article>
 		</div>
-
 		<div class="detalle2">
 			detalle2
 		</div>
-
-
 		<div class="item3">
 			<article id="4">
 				<br>
@@ -110,13 +124,9 @@
 					personalizado que te dejará renovado y revitalizado.</p><br>
 			</article>
 		</div>
-
 		<div class="detalle3">
 			detalle3
-		
 		</div>
-
-
 		<div class="item4">
 			<article id="5">
 				<br>
@@ -127,12 +137,9 @@
 					éxito de tu evento.</p><br>
 			</article>
 		</div>
-
 		<div class="detalle4">
 			detalle4
 		</div>
-
-
 		<div class="item5">
 			<article id="5">
 				<br>
@@ -143,12 +150,9 @@
 					recuerdos inolvidables para cada huésped que cruza nuestras puertas.</p><br>
 			</article>
 		</div>
-
 		<div class="detalle5">
 			detalle5
 		</div>
-
-
 		<div class="item6">
 			<article id="6">
 				<br>
@@ -158,11 +162,7 @@
 					cliente está a tu disposición. No dudes en ponerte en contacto con nosotros para empezar a
 					planificar tus momentos de lujo en Villa La Angostura.</p><br>
 			</article>
-
 			<a class="button" href="formulario.contacto.html"> Formulario de contacto </a>
-
-
-
 		</div>
 		<!--
 <div class="detalle6">
