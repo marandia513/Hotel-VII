@@ -1,7 +1,7 @@
 window.onload = function () {
 const carousel = document.querySelector('.carousel-container');
 const slides = document.querySelectorAll('.carousel-slide');
-
+//probar
 
 let currentIndex = 0;
 
