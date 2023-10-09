@@ -2,18 +2,22 @@
 * {
 	font-family: 'Montserrat', 'Courier New', Courier, monospace
 }
+
 /* colores para usar: #1E2B3D (negro); #304562 (azul);#5695CE (celeste);#8291A3 (gris calro);#CBBBA1 (beige);#F7ECCF (crema);
 */
-.parent { /*tener cuidado con el grid-template-rows, no es recomendable usar la altura*/
+.parent {
+	/*tener cuidado con el grid-template-rows, no es recomendable usar la altura*/
 	background-color: #8291A3;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 0.5fr 0.2fr 0.7fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.1fr; /*agregue el carusel*/
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+	grid-template-rows: 0.2fr 0.4fr 0.6fr 0.8fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.1fr;
+	/*agregue el carusel*/
 	/* maquetado*/
 	grid-template-areas:
 		'logo encabezado login'
 		'nav'
-		'carusel'  /*agregue el carusel*/
+		'carusel'
+		/*agregue el carusel*/
 		'encabezado1 encabezado2'
 		'item1 detalle1'
 		'item2 detalle2'
@@ -23,6 +27,7 @@
 		'item6 detalle6'
 		'footer1';
 }
+
 /*estilo de encabezado*/
 .logo {
 	grid-area: 1 / 1 / 1 / 2;
@@ -31,135 +36,215 @@
 .encabezado {
 	grid-area: 1 / 2 / 1 / 5;
 	text-align: center;
-	font-size: 20px;
-	align-self: center; 
+	font-size: 25px;
+	align-self: center;
 }
 
 .login {
 	grid-area: 1 / 5 / 1 / 6;
-	;
+	
 }
+
 /*estilo del menu*/
 .nav {
 	grid-area: 2 / 1 / 2 / 6;
 	background-color: #304562;
 	text-align: center;
-	font-size: medium;
+	font-size: larger;
 	align-self: center;
 }
 
-.carusel{
-	position: relative;
-	grid-area: 3 / 1 / 3 / 6;
-	background-color: #c92463;
-	text-align: center;
-	font-size: medium;
-  }
-
-  .list {
-	/*agregue el tipo de letra*/
-	font-family: 'Montserrat', sans-serif;
+.list {
+	/*agregue el tipo de letra
+	font-family: 'Montserrat', sans-serif;*/
 	font-style: normal;
 	color: #5695CE;
-	padding: 5px;
+	padding: 15px;
 	width: 100%;
 	max-width: 1200px;
 	text-decoration: none;
 	transition: background-color 0.3s;
 }
+
 /*---para cambiar el texto cuando paso con el mausse*/
 .nav a:hover {
 	background-color: #5695CE;
 	color: #F7ECCF;
-	animation: 0.5s infinite boton-menu;/*agrego boton para cambiar el estilo del menú*/
+	animation: 0.5s infinite boton-menu;
+	/*agrego boton para cambiar el estilo del menú*/
 }
+
 /*para el tiempo de duración*/
 @keyframes boton-menu {
-	0% { transform: scaleX(1.0);}
-	50% { transform: scaleX(1.15);}
-	100% { transform: scaleX(1.0);}
+	0% {transform: scaleX(1.0);	}
+	50% {transform: scaleX(1.15);}
+	100% {transform: scaleX(1.0);}
 }
+
+/*estilo carrusel de fotos*/
+.carusel {
+	position: relative;
+	grid-area: 3 / 1 / 3 / 6;
+	/*background-color: #c92463;/*-cambie el color*/
+	background-color: #8291A3 ;
+	/*overflow: auto;/*para controlar el desbordamiento*/
+	display: flex;
+	width: 100%;
+	height: 70%;
+	
+	
+  }
+.cualquiera button {
+	padding: 2px;
+	color: #304562;
+	background-color: #8291A3;
+	border: none;/*quita borde*/
+	font-size: larger;
+
+}
+   
+.carousel-container img {
+	width: 100%;
+	height: auto;
+text-align: center;
+  }	
+
 /*Estilo de la segunda sección*/
 .encabezado1 {
 	grid-area: 4 / 1 / 4 / 3;
-	background-color: #8291A3;
+	background-color: #5695CE;
 	text-align: center;
 	font-size: 30px;
-	padding: 10px;/*alejar texto principal de los bordes*/
-	overflow: hidden;/*para esconder el texto que se desborda*/
+	padding: 25px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
 }
+
 .encabezado2 {
-		grid-area: 4 / 3 / 4 / 6;
-	background-color: #8291A3;
+	grid-area: 4 / 3 / 4 / 6;
+	background-color: #5695CE;
 	text-align: center;
-	height: min-content;
 }
 /*agregue la ubicación del mapa en encabezado2*/
 .maps-responsive {
 	grid-area: 4 / 3 / 4 / 6;
 	background-color: #8291A3;
-	/*text-align: center;*/
-	height: min-content;
+	width: auto;
+	height: 100%;
 	overflow: hidden;
-	padding-bottom: 50%;
-	position: relative;
-	/*height: 0%;
-	width: 100%;*/
+	/*padding-block-end: 10%;*/
+	/*position: relative;*/
+	position: static;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 .maps-responsive iframe {
 	left: 0;
 	top: 0;
 	height: 100%;
 	width: 100%;
-	position: absolute;
+	/*position: absolute;*/
 }
-/*estilo de la tercera seccion*/
-/*estilos item1, item3, item5*/
-.fondo1{
-	background-color: #F7ECCF;
-}
-/*estilos item2, item4,item5*/
-.fondo2{
-	background-color: #8291A3;
-}
-/*estilos para todos los items*/
-.item_estilo{
-	gap: 1;
-	padding: 2;
-}
-
+/*estilo de la tercera seccion habitaciones*/
 .item1 {
-	grid-area: 5 / 1 / 5 / 3;
+	grid-area: 5 / 1 / 5 / 2;
+	background-color: #F7ECCF;
+	color: #1E2B3D;
+	font-size: 25px;
+	font-style: oblique;
+	text-align: center;
+	padding: 20px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
 }
+/*seccion de habitaciones*/
 .detalle1 {
-	grid-area: 5 / 3 / 5 / 6;
-	background-color: yellow;
+	grid-area: 5 / 2 / 5 / 6;
+	background-color: #F7ECCF;
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-align:justify;
 }
-
+/*estilo de las imagenes*/
+.detalle1 img {
+	width: auto;
+	/*ajusta el ancho de la imagen*/
+	height: 500px;
+	/*ajusta el alto de la imagen*/
+}
+/*seccion restaurante*/
 .item2 {
-	grid-area: 6 / 1 / 6 / 3;
+	grid-area: 6 / 1 / 6 / 4;
+	background-color: #CBBBA1;
+	padding: 15% 5%;
 }
 
 .detalle2 {
-	grid-area: 6 / 3 / 6 / 6;
-	background-color: pink;
+	grid-area: 6 / 4 / 6 / 6;
+	background-color: #1E2B3D;
+	color: #F7ECCF;
+	font-size: 25px;
+	font-style: oblique;
+	padding: 55px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
+	text-align: justify;
 }
-
+.detalle2 h3 {
+	font-size: 30px;
+	text-align: center;
+}
+/*estilo de spa*/
 .item3 {
 	grid-area: 7 / 1 / 7 / 3;
+	background-color: #5695CE;
+	color: #1E2B3D;
+	font-size: 25px;
+	font-style: oblique;
+	padding: 15% 55px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
+	text-align: justify;
 }
-
+.item3 h3 {
+	font-size: 30px;
+	text-align: center;
+}
+/*estilo de la imagen spa*/
 .detalle3 {
 	grid-area: 7 / 3 / 7 / 6;
+	background-color: #1E2B3D;
+	padding: 5px 25px;
+	color: #5695CE;
+	font-size: 15px;
+	font-style: oblique;
+	text-align: center;
+
 }
 
 .item4 {
 	grid-area: 8 / 1 / 8 / 3;
-}
+	background-color: yellow;
+	color: #1E2B3D;
+	font-size: 25px;
+	font-style: oblique;
+	padding: 15% 55px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
+	text-align: justify;
 
+}
+.item4 h3 {
+	font-size: 30px;
+	text-align: center;
+	
+
+}
 .detalle4 {
 	grid-area: 8 / 3 / 8 / 6;
 	background-color: pink;
@@ -167,49 +252,68 @@
 
 .item5 {
 	grid-area: 9 / 1 / 9 / 3;
+	background-color: pink;
 }
 
 .detalle5 {
 	grid-area: 9 / 3 / 9 / 6;
 	background-color: yellow;
 }
+
 .item6 {
 	grid-area: 10 / 1 / 10 / 6;
+	background-color: #8291A3;
 	text-align: center;
 	font-style: normal;
 	font-size: larger;
 	text-align: center;
 	color: #1E2B3D;
+	font-size: 20px;
+	padding: 30px;
 }
-/*estilo de footer*/
-.footer1 {
-	grid-area: 11 / 1 / 11 / 10;
-	background-color: #8291A3;
-	color: #0f0e0e;
-	text-align: center;
-	padding: 5px;
-}
-.icon {
-	background-color: #8291A3;
-	color: rgb(21, 21, 20);
+
+.item6 h3 {
+	font-size: 35px;
+
 }
 
 .button {
 	background-color: #304562;
 	color: #F7ECCF;
 	border: none;
-	border-radius: 5px;
-	padding: 10px 20px;
+	border-radius: 10px;
+	padding: 30px 50px;
 	cursor: pointer;
-	font-size: 15px;
-}
+	font-size: 20px;
+	}
 
-/* estilo en pc*/
+/*estilo de footer*/
+.footer1 {
+	grid-area: 11 / 1 / 11 / 10;
+	background-color: #8291A3;
+	color: #0f0e0e;
+	text-align: center;
+}
+.icon {
+	background-color: #8291A3;
+	color: rgb(21, 21, 20);
+	font-size: 25px;
+	padding: 5px;
+	margin: 5px;}
+	/*probando para hacer animación
+	/*display: inline-block;
+	animation-play-state: 20s infinite icon-redes;
+}
+@keyframes icon-redes {
+	0% {transform: scaleX(1.0);	}
+	50% {transform: scaleX(1.15);}
+	100% {transform: scaleX(1.0);}
+}*/
 
 @media screen and (max-width: 1024px) {
 
 	.parent {
-		background-color: #8291A3;
+		background-color: red;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
@@ -228,17 +332,18 @@
 
 	.logo {
 		grid-area: 1 / 1 / 1 / 2;
-		background-color: #8291A3 ;
+		background-color: red;
 	}
 
 	.encabezado {
 		grid-area: 1 / 2 / 1 / 4;
 		background-color: yellow;
 	}
-/*para futuro*/
+
+	/*para futuro*/
 	.login {
 		grid-area: 1 / 4 / 1 / 5;
-		background-color: #8291A3 ;
+		background-color: blue;
 	}
 
 	.nav {
@@ -248,7 +353,7 @@
 
 	.encabezado2 {
 		grid-area: 3 / 1 / 3 / 5;
-		
+		background-color: grey;
 	}
 
 	.item1 {
@@ -438,41 +543,43 @@
 .carousel-container {
 	display: flex;
 	overflow: hidden;
-	width: 800px; /* Ajusta el ancho según tus necesidades */
+	width: 800px;
+	/* Ajusta el ancho según tus necesidades */
 	position: relative;
-  }
-  
-  .carousel-slide {
-	flex: 0 0 100%; /* Cada diapositiva ocupa el 100% del ancho del contenedor */
+}
+
+.carousel-slide {
+	flex: 0 0 100%;
+	/* Cada diapositiva ocupa el 100% del ancho del contenedor */
 	transition: transform 0.3s ease-in-out;
-  }
-  
-  img {
+}
+
+img {
 	max-width: 100%;
 	height: auto;
-  }
-  
-  button {
-	cursor: pointer;
-  }
+}
 
-  /* Posición de los botones */
-  #prevButton {
+button {
+	cursor: pointer;
+}
+
+/* Posición de los botones */
+#prevButton {
 	top: 0;
 	left: 10px;
 	bottom: 0;
-  }
-  
-  #nextButton {
+}
+
+#nextButton {
 	top: 0;
 	right: 10px;
 	bottom: 0;
-  }
+}
 
-  .cualquiera{
+.cualquiera {
 	display: flex;
-	margin:0 auto;
+	margin: 0 auto;
 	position: relative;
 	justify-content: center;
-    align-items: stretch;
-  }
+	align-items: stretch;
+}

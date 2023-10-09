@@ -7,10 +7,11 @@ body{
 header{
     background-color: #5695CE;
     color: #1E2B3D;
-    font-size: 15px;   
+    font-size: 20px;  
+    text-align: center; /*agregue cebtrado del titulo*/
 }
 /* Estilos para cada elemento de la lista*/
-/*agregue tipo d eletra*/
+/*agregue tipo de letra*/
 .container {
     background-color:#304562;
     color: #CBBBA1;
