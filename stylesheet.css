@@ -1,0 +1,536 @@
+/* font */
+* {
+	font-family: 'Montserrat', 'Courier New', Courier, monospace;
+	color: #304562;
+	text-align: center;
+	}
+
+/* colores para usar: #1E2B3D (negro); #304562 (azul);#5695CE (celeste);#8291A3 (gris calro);#CBBBA1 (beige);#F7ECCF (crema);
+*/
+.parent {
+	/*tener cuidado con el grid-template-rows, no es recomendable usar la altura*/
+	background-color: #F7ECCF;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+	grid-template-rows: 0.5fr 0.2fr 0.5fr 0.7fr 1fr 1fr 1fr 0.7fr 0.7fr 1fr 0.2fr;
+	/*agregue el carusel*/
+	/* maquetado*/
+	grid-template-areas:
+		'logo encabezado login'
+		'nav'
+		'carusel' /*agregue el carusel*/
+		'encabezado1 encabezado2'
+		'item1 detalle1'
+		'item2 detalle2'
+		'item3 detalle3'
+		'item4 detalle4'
+		'item5 detalle5'
+		'item6 detalle6'Z
+		'footer1';
+}
+
+/*estilo de encabezado*/
+.logo {
+	grid-area: 1 / 1 / 1 / 2;
+	align-self: center;/*para alinear el logo dentro del contenedor*/
+	}
+/*titulo ppal*/
+.encabezado {
+	grid-area: 1 / 2 / 1 / 5;
+	align-self: center;
+	}
+
+.login {
+	grid-area: 1 / 5 / 1 / 6;
+	align-self: center;
+	}
+
+/*estilo del menu*/
+.nav {
+	grid-area: 2 / 1 / 2 / 6;
+	background-color: #304562;
+	font-size: 15px;
+	align-self: center;
+	padding: 30px;
+}
+
+.list {
+	font-style: normal;
+	color: #5695CE;
+	padding: 15px;
+	width: 100%;
+	max-width: 100px;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+/*---para cambiar el texto cuando paso con el mausse*/
+.nav a:hover {
+	background-color: #5695CE;
+	color: #F7ECCF;
+	animation: 0.5s infinite boton-menu;
+	/*agrego boton para cambiar el estilo del menú*/
+}
+
+/*para el tiempo de duración*/
+@keyframes boton-menu {
+	0% {transform: scaleX(1.0);	}
+	50% {transform: scaleX(1.15);}
+	100% {transform: scaleX(1.0);}
+}
+
+/*estilo carrusel de fotos*/
+.carusel {
+	grid-area: 3 / 1 / 3 / 6;
+	background-color: #8291A3 ;
+	/*overflow: auto;/*para controlar el desbordamiento*/
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: relative;
+	align-self: center;
+	
+  }
+.cualquiera button {
+	padding: 2px;
+	color: #304562;
+	background-color: #8291A3;
+	border: none;/*quita el borde*/
+	font-size: larger;
+}
+.carousel-container img {
+	width: 100%;
+	height: auto;
+	}	
+
+/*Estilo de la segunda sección*/
+.encabezado1 {
+	grid-area: 4 / 1 / 4 / 3;
+	text-align: center;
+	font-size: 15px;
+	padding: 25px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
+}
+
+.encabezado2 {
+	grid-area: 4 / 3 / 4 / 6;
+	}
+/*agregue la ubicación del mapa en encabezado2*/
+.maps-responsive {
+	grid-area: 4 / 3 / 4 / 6;
+	display: flex;
+}
+.maps-responsive iframe {
+	left: 0;
+	top: 0;
+	height: 80%;
+	width: 80%;
+	padding: 5% 20%;
+	/*position: absolute;*/
+}
+/*estilo de la tercera seccion habitaciones*/
+.item1 {
+	grid-area: 5 / 1 / 5 / 2;
+	font-size: 15px;
+	padding:  0cqb 5px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
+}
+/*seccion de habitaciones*/
+.detalle1 {
+	grid-area: 5 / 2 / 5 / 6;
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-align:justify;
+	padding: 0px 5px;
+}
+/*estilo de las imagenes*/
+.detalle1 img {
+	padding: 1% 0.5%;
+	width: auto;
+	/*ajusta el ancho de la imagen*/
+	height: 200px;
+	/*ajusta el alto de la imagen*/
+}
+/*seccion restaurante*/
+.item2 {
+	grid-area: 6 / 1 / 6 / 4;
+	padding: 0% 5%;
+}
+.item2 img {
+	width: 500px;
+	height: auto;
+}
+.detalle2 {
+	grid-area: 6 / 4 / 6 / 6;
+	padding: 0px 5px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
+	text-align: justify;
+}
+
+/*estilo de spa*/
+.item3 {
+	grid-area: 7 / 1 / 7 / 3;
+	padding: 0% 5px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
+	text-align: justify;
+}
+/*estilo de la imagen spa*/
+.detalle3 {
+	grid-area: 7 / 3 / 7 / 6;
+	padding: 0px 5px;
+	}
+
+.detalle3 img {
+	width: 500px;
+	height: auto;
+}	
+.item4 {
+	grid-area: 8 / 1 / 8 / 3;
+	padding: 0% 5px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
+	text-align: justify;
+}
+.item4 h3 {
+	font-size: 20px;
+	}
+.detalle4 {
+	grid-area: 8 / 3 / 8 / 6;
+	padding: 0px 5px;
+	
+}
+
+.item5 {
+	grid-area: 9 / 1 / 9 / 3;
+	
+}
+
+.detalle5 {
+	grid-area: 9 / 3 / 9 / 6;
+	
+}
+
+.item6 {
+	grid-area: 10 / 1 / 10 / 6;
+	padding: 0px 5px;
+}
+
+.item6 h3 {
+	font-size: 20px;
+}
+
+.button {
+	background-color: #304562;
+	color: #F7ECCF;
+	border: none;
+	border-radius: 10px;
+	padding: 30px 50px;
+	cursor: pointer;
+	font-size: 20px;
+	}
+
+/*estilo de footer*/
+.footer1 {
+	grid-area: 11 / 1 / 11 / 10;
+	text-align: center;
+	padding: 5px;
+	
+}
+.icon {
+	color: #1E2B3D;
+	font-size: 25px;
+	padding: 5px;
+	margin: 5px;}
+	/*probando para hacer animación
+	/*display: inline-block;
+	animation-play-state: 20s infinite icon-redes;
+}
+@keyframes icon-redes {
+	0% {transform: scaleX(1.0);	}
+	50% {transform: scaleX(1.15);}
+	100% {transform: scaleX(1.0);}
+}*/
+
+@media screen and (max-width: 1024px) {
+
+	.parent {
+		background-color: red;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+		grid-template-areas:
+			'logo encabezado login'
+			'nav'
+			'encabezado2'
+			'item1 detalle1'
+			'item2 detalle2'
+			'item3 detalle3'
+			'item4 detalle4'
+			'item5 detalle5'
+			'item6 detalle6'
+			'footer1';
+	}
+
+	.logo {
+		grid-area: 1 / 1 / 1 / 2;
+		background-color: red;
+	}
+
+	.encabezado {
+		grid-area: 1 / 2 / 1 / 4;
+		background-color: yellow;
+	}
+
+	/*para futuro*/
+	.login {
+		grid-area: 1 / 4 / 1 / 5;
+		background-color: blue;
+	}
+
+	.nav {
+		grid-area: 2 / 1 / 2 / 5;
+		background-color: pink;
+	}
+
+	.encabezado2 {
+		grid-area: 3 / 1 / 3 / 5;
+		background-color: grey;
+	}
+
+	.item1 {
+		grid-area: 5 / 1 / 5 / 3;
+		background-color: aquamarine;
+	}
+
+	.detalle1 {
+		grid-area: 5 / 3 / 5 / 5;
+		background-color: whitesmoke;
+	}
+
+	.item2 {
+		grid-area: 6 / 1 / 6 / 3;
+		background-color: whitesmoke;
+	}
+
+	.detalle2 {
+		grid-area: 6 / 3 / 6 / 5;
+		background-color: aquamarine;
+	}
+
+	.item3 {
+		grid-area: 7 / 1 / 7 / 3;
+		background-color: aquamarine;
+	}
+
+	.detalle3 {
+		grid-area: 7 / 3 / 7 / 5;
+		background-color: whitesmoke;
+	}
+
+	.item4 {
+		grid-area: 8 / 1 / 8 / 3;
+		background-color: whitesmoke;
+	}
+
+	.detalle4 {
+		grid-area: 8 / 3 / 8 / 5;
+		background-color: aquamarine;
+	}
+
+	.item5 {
+		grid-area: 9 / 1 / 9 / 3;
+		background-color: aquamarine;
+	}
+
+	.detalle5 {
+		grid-area: 9 / 3 / 9 / 5;
+		background-color: whitesmoke;
+	}
+
+	.item6 {
+		grid-area: 10 / 1 / 10 / 3;
+		background-color: whitesmoke;
+	}
+
+	.detalle6 {
+		grid-area: 10 / 3 / 10 / 5;
+		background-color: aquamarine;
+	}
+
+	.footer1 {
+		grid-area: 11 / 1 / 11 / 2;
+		background-color: orange;
+	}
+
+}
+
+
+@media screen and (max-width: 512px) {
+
+	.parent {
+		background-color: orange;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+		grid-template-areas:
+			'logo'
+			'encabezado'
+			'login'
+			'nav'
+			'encabezado2'
+			'item1'
+			'detalle1'
+			'item2'
+			'detalle2'
+			'item3'
+			'detalle3'
+			'item4'
+			'detalle4'
+			'item5'
+			'detalle5'
+			'item6'
+			'detalle6'
+			'footer1';
+	}
+
+	/* .logo { grid-area: 1 / 1 / 1 / 2; background-color: green;} */
+	.encabezado {
+		grid-area: 1 / 1 / 1 / 2;
+		background-color: red;
+	}
+
+	/* .login { grid-area: 3 / 1 / 3 / 2; background-color: green;} */
+	.nav {
+		grid-area: 2 / 1 / 2 / 2;
+		background-color: orange;
+	}
+
+	.encabezado2 {
+		grid-area: 3 / 1 / 3 / 2;
+		background-color: red;
+	}
+
+	.item1 {
+		grid-area: 5 / 1 / 5 / 2;
+		background-color: red;
+	}
+
+	.item2 {
+		grid-area: 6 / 1 / 6 / 2;
+		background-color: greenyellow;
+	}
+
+	.item3 {
+		grid-area: 7 / 1 / 7 / 2;
+		background-color: greenyellow;
+	}
+
+	.item4 {
+		grid-area: 8 / 1 / 8 / 2;
+		background-color: darkgrey;
+	}
+
+	.item5 {
+		grid-area: 9 / 1 / 9 / 2;
+		background-color: darkgoldenrod;
+	}
+
+	.item6 {
+		grid-area: 10 / 1 / 10 / 2;
+		background-color: pink;
+	}
+
+	/* .footer1 { grid-area: 12 / 1 / 8 / 2; background-color: darkgrey;} */
+
+
+	.logo {
+		display: none;
+	}
+
+	.login {
+		display: none;
+	}
+
+	.detalle1 {
+		display: none;
+	}
+
+	.detalle2 {
+		display: none;
+	}
+
+	.detalle3 {
+		display: none;
+	}
+
+	.detalle4 {
+		display: none;
+	}
+
+	.detalle5 {
+		display: none;
+	}
+
+	.detalle6 {
+		display: none;
+	}
+
+	.footer1 {
+		display: none;
+	}
+
+}
+
+/*esto es del carrusel*/
+.carousel-container {
+	display: flex;
+	overflow: hidden;
+	width: 800px;
+	/* Ajusta el ancho según tus necesidades */
+	position: relative;
+}
+
+.carousel-slide {
+	flex: 0 0 100%;
+	/* Cada diapositiva ocupa el 100% del ancho del contenedor */
+	transition: transform 0.3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* Posición de los botones */
+#prevButton {
+	top: 0;
+	left: 10px;
+	bottom: 0;
+}
+
+#nextButton {
+	top: 0;
+	right: 10px;
+	bottom: 0;
+}
+
+.cualquiera {
+	display: flex;
+	margin: 0 auto;
+	position: relative;
+	justify-content: center;
+	align-items: stretch;
+}
