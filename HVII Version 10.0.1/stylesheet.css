@@ -12,23 +12,22 @@
 	background-color: #F7ECCF;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-	grid-template-rows: 0.5fr 0.2fr 0.5fr 0.7fr 1fr 1fr 1fr 0.7fr 0.7fr 1fr 0.2fr;
+	grid-template-rows: 0.4fr 0.2fr 0.5fr 0.6fr 1fr 0.8fr 0.8fr 0.7fr 0.5fr 0.5fr 0.3fr;
 	/*agregue el carusel*/
 	/* maquetado*/
 	grid-template-areas:
 		'logo encabezado login'
 		'nav'
 		'carusel' /*agregue el carusel*/
-		'encabezado1 encabezado2'
-		'item1 detalle1'
-		'item2 detalle2'
-		'item3 detalle3'
-		'item4 detalle4'
-		'item5 detalle5'
-		'item6 detalle6'Z
+		'encabezado1 encabezado2'/*maps*/
+		'item1 detalle1'/*habitación*/
+		'item2 detalle2'/*Restaurante*/
+		'item3 detalle3'/*spa*/
+		'item4 detalle4'/*salón*/
+		'item5 detalle5'/*compromiso de la empresa*/
+		'item6 detalle6'/*contacto*/
 		'footer1';
 }
-
 /*estilo de encabezado*/
 .logo {
 	grid-area: 1 / 1 / 1 / 2;
@@ -39,21 +38,20 @@
 	grid-area: 1 / 2 / 1 / 5;
 	align-self: center;
 	}
-
 .login {
 	grid-area: 1 / 5 / 1 / 6;
 	align-self: center;
 	}
-
 /*estilo del menu*/
 .nav {
 	grid-area: 2 / 1 / 2 / 6;
 	background-color: #304562;
 	font-size: 15px;
 	align-self: center;
-	padding: 30px;
+	padding: 25px;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
 }
-
 .list {
 	font-style: normal;
 	color: #5695CE;
@@ -63,7 +61,6 @@
 	text-decoration: none;
 	transition: background-color 0.3s;
 }
-
 /*---para cambiar el texto cuando paso con el mausse*/
 .nav a:hover {
 	background-color: #5695CE;
@@ -71,14 +68,12 @@
 	animation: 0.5s infinite boton-menu;
 	/*agrego boton para cambiar el estilo del menú*/
 }
-
 /*para el tiempo de duración*/
 @keyframes boton-menu {
 	0% {transform: scaleX(1.0);	}
 	50% {transform: scaleX(1.15);}
 	100% {transform: scaleX(1.0);}
 }
-
 /*estilo carrusel de fotos*/
 .carusel {
 	grid-area: 3 / 1 / 3 / 6;
@@ -89,8 +84,7 @@
 	display: flex;
 	position: relative;
 	align-self: center;
-	
-  }
+	  }
 .cualquiera button {
 	padding: 2px;
 	color: #304562;
@@ -102,7 +96,6 @@
 	width: 100%;
 	height: auto;
 	}	
-
 /*Estilo de la segunda sección*/
 .encabezado1 {
 	grid-area: 4 / 1 / 4 / 3;
@@ -113,8 +106,26 @@
 	overflow: hidden;
 	/*para esconder el texto que se desborda*/
 }
-
-.encabezado2 {
+/*agregado de la API*/
+.clima1 button  {
+	font-size: 14px;
+    color: #304562;
+	border: none;
+	background-color: #F7ECCF;
+   border-radius: 3px;
+   border: 1px solid #303030;
+    padding: 5px 10px;
+    margin: 3px 10px;	
+}
+.clima2 {
+	font-size: 14px;
+    color: #F7ECCF;
+    background-color:cornflowerblue;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 3px 10px;		
+}
+/*.encabezado2 {
 	grid-area: 4 / 3 / 4 / 6;
 	}
 /*agregue la ubicación del mapa en encabezado2*/
@@ -139,13 +150,26 @@
 	overflow: hidden;
 	/*para esconder el texto que se desborda*/
 }
+.reserva:hover {
+		background-color: #304562;
+		color: #F7ECCF;
+		padding: 10px;
+		animation: 0.5s infinite boton-reserva;
+		/*agrego boton para cambiar el estilo del menú*/
+	}
+@keyframes boton-reserva {
+		0% {transform: scaleX(1.0);	}
+		50% {transform: scaleX(1.15);}
+		100% {transform: scaleX(1.0);}
+	}
+
 /*seccion de habitaciones*/
 .detalle1 {
 	grid-area: 5 / 2 / 5 / 6;
 	display: block;
 	height: 100%;
 	width: 100%;
-	text-align:justify;
+	justify-content: space-around; /*centrar las fotos ocupando todo el espacio*/
 	padding: 0px 5px;
 }
 /*estilo de las imagenes*/
@@ -166,14 +190,13 @@
 	height: auto;
 }
 .detalle2 {
-	grid-area: 6 / 4 / 6 / 6;
+	grid-area: 6 / 4 / 6 / 5;
 	padding: 0px 5px;
 	/*alejar texto principal de los bordes*/
 	overflow: hidden;
 	/*para esconder el texto que se desborda*/
 	text-align: justify;
 }
-
 /*estilo de spa*/
 .item3 {
 	grid-area: 7 / 1 / 7 / 3;
@@ -193,6 +216,7 @@
 	width: 500px;
 	height: auto;
 }	
+/*salón de ventos*/
 .item4 {
 	grid-area: 8 / 1 / 8 / 3;
 	padding: 0% 5px;
@@ -207,64 +231,83 @@
 .detalle4 {
 	grid-area: 8 / 3 / 8 / 6;
 	padding: 0px 5px;
-	
 }
-
+.detalle4 img {
+	width: 500px;
+	height: auto;
+}
 .item5 {
-	grid-area: 9 / 1 / 9 / 3;
-	
+	grid-area: 9 / 1 / 9 / 2;
+	padding: 25px;
 }
-
 .detalle5 {
-	grid-area: 9 / 3 / 9 / 6;
-	
+	grid-area: 9 / 2 / 9 / 5;
+	padding: 25px;
 }
-
+.items5bis {
+	grid-area: 9 / 5 / 9 / 6 ;
+	padding: 50px;
+}
 .item6 {
 	grid-area: 10 / 1 / 10 / 6;
 	padding: 0px 5px;
 }
-
 .item6 h3 {
 	font-size: 20px;
 }
-
 .button {
-	background-color: #304562;
+	background-color: #5695CE;
 	color: #F7ECCF;
 	border: none;
 	border-radius: 10px;
-	padding: 30px 50px;
+	padding: 10px;
 	cursor: pointer;
 	font-size: 20px;
 	}
-
+.button:hover {
+		background-color: #304562;
+		color: #F7ECCF;
+		padding: 10px;
+		animation: 0.5s infinite boton-contacto;
+		/*agrego boton para cambiar el estilo del menú*/
+	}
+@keyframes boton-contacto {
+		0% {transform: scaleX(1.0);	}
+		50% {transform: scaleX(1.15);}
+		100% {transform: scaleX(1.0);}
+	}	
 /*estilo de footer*/
 .footer1 {
-	grid-area: 11 / 1 / 11 / 10;
+	grid-area: 11 / 1 / 11 / 6;
 	text-align: center;
-	padding: 5px;
-	
-}
-.icon {
-	color: #1E2B3D;
+	background-color: #304562;
+	padding: 25px 5px;
+	color: #F7ECCF;
+	}
+.icon i{
+	color: #F7ECCF;
 	font-size: 25px;
 	padding: 5px;
-	margin: 5px;}
-	/*probando para hacer animación
-	/*display: inline-block;
-	animation-play-state: 20s infinite icon-redes;
+	margin: 5px;
+	/*probando para hacer animación*/
+	display: inline-block;
+	}
+.icon i:hover {
+	background-color: #F7ECCF;
+	color: #304562;
+	animation: 0.5s infinite boton-menu;
+	/*agrego boton para cambiar el estilo del menú*/
 }
-@keyframes icon-redes {
+@keyframes boton-menu {
 	0% {transform: scaleX(1.0);	}
 	50% {transform: scaleX(1.15);}
 	100% {transform: scaleX(1.0);}
-}*/
+}
+
 
 @media screen and (max-width: 1024px) {
-
 	.parent {
-		background-color: red;
+		background-color: #F7ECCF;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
@@ -280,57 +323,45 @@
 			'item6 detalle6'
 			'footer1';
 	}
-
 	.logo {
 		grid-area: 1 / 1 / 1 / 2;
-		background-color: red;
-	}
-
+			}
 	.encabezado {
 		grid-area: 1 / 2 / 1 / 4;
-		background-color: yellow;
-	}
+			}
 
 	/*para futuro*/
 	.login {
 		grid-area: 1 / 4 / 1 / 5;
-		background-color: blue;
+		
 	}
-
 	.nav {
 		grid-area: 2 / 1 / 2 / 5;
-		background-color: pink;
-	}
+			}
 
 	.encabezado2 {
 		grid-area: 3 / 1 / 3 / 5;
-		background-color: grey;
-	}
+			}
 
 	.item1 {
 		grid-area: 5 / 1 / 5 / 3;
-		background-color: aquamarine;
-	}
+			}
 
 	.detalle1 {
 		grid-area: 5 / 3 / 5 / 5;
-		background-color: whitesmoke;
-	}
+			}
 
 	.item2 {
 		grid-area: 6 / 1 / 6 / 3;
-		background-color: whitesmoke;
-	}
+			}
 
 	.detalle2 {
 		grid-area: 6 / 3 / 6 / 5;
-		background-color: aquamarine;
-	}
+			}
 
 	.item3 {
 		grid-area: 7 / 1 / 7 / 3;
-		background-color: aquamarine;
-	}
+			}
 
 	.detalle3 {
 		grid-area: 7 / 3 / 7 / 5;
@@ -407,7 +438,6 @@
 		grid-area: 1 / 1 / 1 / 2;
 		background-color: red;
 	}
-
 	/* .login { grid-area: 3 / 1 / 3 / 2; background-color: green;} */
 	.nav {
 		grid-area: 2 / 1 / 2 / 2;

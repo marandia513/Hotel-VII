@@ -1,39 +1,44 @@
-
 /* colores para usar: #1E2B3D (negro); #304562 (azul);#5695CE (celeste);#8291A3 (gris calro);#CBBBA1 (beige);#F7ECCF (crema);
 */
-body{
+* {
+    font-family: 'Montserrat', 'Courier New', Courier, monospace
+}
+
+body {
     background-color: #8291A3;
 }
-header{
+
+header {
     background-color: #5695CE;
     color: #1E2B3D;
-    font-size: 20px;  
-    text-align: center; /*agregue cebtrado del titulo*/
+    font-size: 20px;
+    text-align: center;
+    /*agregue centrado del titulo*/
 }
+
 /* Estilos para cada elemento de la lista*/
-/*agregue tipo de letra*/
 .container {
-    background-color:#304562;
+    background-color: #304562;
     color: #CBBBA1;
     max-width: 600px;
     margin: 0 auto;
     padding: 80px;
     border: 10px solid #ccc;
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
+
     font-size: 15px;
-    font-style: italic;   
+    font-style: italic;
 }
 
 select {
     font-size: 15px;
     display: block;
-    font-weight:lighter;
+    font-weight: lighter;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #CBBBA1;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 label {
@@ -55,77 +60,85 @@ input[type="email"] {
     border-radius: 5px;
     font-size: 15px;
 }
+
 /*diseño de boton de enviar / borrar*/
 button {
     background-color: #5695CE;
-    color:#F7ECCF ;
+    color: #F7ECCF;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 15px;    
+    font-size: 15px;
 }
+
 /*diseño del boton volver*/
 a {
     background-color: #304562;
-    color:#F7ECCF ;
+    color: #F7ECCF;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 15px; 
+    font-size: 15px;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
+
 /*diseño de datos de reservas*/
 .h1 {
     background-color: #5695CE;
-    color:#304562;
-    font-size: 35px;  
-    font-family: 'Montserrat', sans-serif;
+    color: #304562;
+    font-size: 35px;
     text-align: center;
 }
+
 .h2 {
     background-color: #5695CE;
-    color:#304562;
-    font-size: 25px;  
-    font-family: 'Montserrat', sans-serif;
+    color: #304562;
+    font-size: 25px;
     text-align: center;
 }
+
 .table {
-text-align: center;   
-border-collapse: collapse; /*opcion de borde para una apraciencia más limpia*/
-width: 100%; 
-height: 100%;
-background-color: #ccc;
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-size: large;
+    text-align: center;
+    border-collapse: collapse;
+    /*opcion de borde para una apraciencia más limpia*/
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    font-size: large;
 }
-.th, td {
-    border: 1px solid #304562; /* Establece un borde sólido de 1 píxel de ancho y color negro */
-    padding: 10px; /* Añade un espacio de relleno alrededor del contenido de las celdas */
-  }
+
+.th,
+td {
+    border: 1px solid #304562;
+    /* Establece un borde sólido de 1 píxel de ancho y color negro */
+    padding: 10px;
+    /* Añade un espacio de relleno alrededor del contenido de las celdas */
+}
+
 .texto {
     text-align: center;
-    padding: auto;   
-  font-family: 'Montserrat', sans-serif;
+    padding: auto;
     font-size: 15px;
-    font-style: italic; 
+    font-style: italic;
 }
+
 .footer {
-   	background-color: #8291A3;
-	color: #0f0e0e;
-	text-align: center;
-	padding: 5px;
+    background-color: #8291A3;
+    color: #0f0e0e;
+    text-align: center;
+    padding: 5px;
 }
 
 .container_form {
-    text-align: center;   
-    border-collapse: collapse; /*opcion de borde para una apraciencia más limpia*/
-    width: 100%; 
+    text-align: center;
+    border-collapse: collapse;
+    /*opcion de borde para una apraciencia más limpia*/
+    width: 100%;
     height: 100%;
     background-color: #ccc;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
 }
