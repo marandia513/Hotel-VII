@@ -1,18 +1,19 @@
 /* font */
-* {
-	font-family: 'Montserrat', 'Courier New', Courier, monospace;
+*{
+	font-family: 'Montserrat', sans-serif;
 	color: #304562;
 	text-align: center;
-	}
+	margin: 0px;
+}	
 
-/* colores para usar: #1E2B3D (negro); #304562 (azul);#5695CE (celeste);#8291A3 (gris calro);#CBBBA1 (beige);#F7ECCF (crema);
-*/
+/* colores para usar: #1E2B3D (negro); #304562 (azul);#5695CE (celeste);#8291A3 (gris calro);#CBBBA1 (beige);#F7ECCF (crema);*/
+
 .parent {
 	/*tener cuidado con el grid-template-rows, no es recomendable usar la altura*/
 	background-color: #F7ECCF;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-	grid-template-rows: 0.4fr 0.2fr 0.5fr 0.6fr 1fr 0.8fr 0.8fr 0.7fr 0.5fr 0.5fr 0.3fr;
+	grid-template-rows: 0.15fr 0.2fr 0.5fr 0.6fr 1fr 0.8fr 0.8fr 0.7fr 0.5fr 0.5fr 0.3fr;
 	/*agregue el carusel*/
 	/* maquetado*/
 	grid-template-areas:
@@ -30,6 +31,7 @@
 }
 /*estilo de encabezado*/
 .logo {
+	margin: 5%;
 	grid-area: 1 / 1 / 1 / 2;
 	align-self: center;/*para alinear el logo dentro del contenedor*/
 	}
@@ -41,6 +43,10 @@
 .login {
 	grid-area: 1 / 5 / 1 / 6;
 	align-self: center;
+	color: #304562;
+	font-size: 25px;
+	text-decoration: none;
+
 	}
 /*estilo del menu*/
 .nav {
@@ -48,7 +54,7 @@
 	background-color: #304562;
 	font-size: 15px;
 	align-self: center;
-	padding: 25px;
+	padding: 20px;
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
 }
