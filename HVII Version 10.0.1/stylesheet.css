@@ -250,7 +250,7 @@ button {
 .encabezado1 {
 	grid-area: 4 / 1 / 4 / 3;
 	text-align: center;
-	font-size: 15px;
+	font-size: 1.5em;
 	padding: 25px;
 	/*alejar texto principal de los bordes*/
 	overflow: hidden;
@@ -258,25 +258,22 @@ button {
 }
 
 /*agregado de la API*/
-.clima1 button {
-	font-size: 14px;
-	color: #304562;
-	border: none;
-	background-color: #F7ECCF;
-	border-radius: 3px;
-	border: 1px solid #303030;
-	padding: 5px 10px;
-	margin: 3px 10px;
-}
-
 .clima2 {
-	font-size: 14px;
-	color: #F7ECCF;
-	background-color: cornflowerblue;
+	/*font-size: 2em;*/
 	border-radius: 3px;
 	padding: 5px 10px;
 	margin: 3px 10px;
 }
+.show_api {
+    
+    margin-top: 2em;
+    width: fit-content;
+    background-color: cornflowerblue;
+    border-radius: 3px;
+    border: 1px solid #303030;
+    /*padding: 5px 15px 2px 15px;*/
+	padding: 1em 3em 1em 3em;
+    }
 
 /*.encabezado2 {
 	grid-area: 4 / 3 / 4 / 6;
@@ -299,7 +296,7 @@ button {
 /*estilo de la tercera seccion habitaciones*/
 .item1 {
 	grid-area: 5 / 1 / 5 / 2;
-	font-size: 15px;
+	font-size: 1.5em;
 	padding: 0cqb 5px;
 	/*alejar texto principal de los bordes*/
 	overflow: hidden;
@@ -362,10 +359,12 @@ button {
 .detalle2 {
 	grid-area: 6 / 4 / 6 / 5;
 	padding: 0px 5px;
+	font-size: 1.5 em;
 	/*alejar texto principal de los bordes*/
 	overflow: hidden;
 	/*para esconder el texto que se desborda*/
 	text-align: justify;
+
 }
 
 /*estilo de spa*/
