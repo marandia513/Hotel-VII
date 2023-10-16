@@ -29,6 +29,10 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 5000); // Cambia de diapositiva cada 5 segundos (5000 milisegundos)
+
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
+  menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+  });
 }
-
-

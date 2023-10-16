@@ -55,15 +55,20 @@
 		<!--	Menu   -->
 		<div class="nav">
 			<nav>
-				<h2>
-					<a class='list' href="#1">Sobre HVII</a> <strong></strong>
-					<a class='list' href="#2">Habitaciones</a> <strong></strong>
-					<a class='list' href="#3">Restaurantes</a> <strong></strong>
-					<a class='list' href="#4">Spa & Gym</a> <strong></strong>
-					<a class='list' href="#5">Eventos y Salones</a> <strong></strong>
-					<a class='list' href="contactsform.html">Contacto</a>
-					<a class='list' href="reservationform.html">Reservas</a>
-				</h2>
+				<div id="menu-toggle" class="menu-icon">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+				<ul class="hidden" id="nav-list">
+						<li><a class='list' href="#1">Sobre HVII</a></li>
+						<li><a class='list' href="#2">Habitaciones</a></li>
+						<li><a class='list' href="#3">Restaurantes</a></li>
+						<li><a class='list' href="#4">Spa & Gym</a></li>
+						<li><a class='list' href="#5">Eventos y Salones</a></li>
+						<li><a class='list' href="contactsform.html">Contacto</a></li>
+						<li><a class='list' href="reservationform.html">Reservas</a></li>
+				</ul>
 			</nav>
 		</div>
 		<!-- Carousel -->
@@ -111,8 +116,6 @@
 		 <!-- Aquí insertaremos contenido que recuperamos
 				 mediante la API -->
 			 </div>
-	 
-
 		</div>
 		<!--encabezado2 ubicacion google maps -->
 		<div class="maps-responsive">
@@ -129,6 +132,7 @@
 					estándar hasta las suites presidenciales, cada espacio está meticulosamente decorado para satisfacer
 					incluso los gustos más exigentes.</p>
 			</article>
+			<br>
 			<a class="reserva" href="reservationform.html">Reservas</a>
 		</div>
 		<div class="detalle1">
