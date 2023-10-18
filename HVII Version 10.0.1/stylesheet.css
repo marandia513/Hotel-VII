@@ -7,7 +7,7 @@
 }
 
 /*clase para mostrar imagenes*/
-img-responsive {
+.img-responsive {
     display: block;
     width: 100%;
     height: auto;
