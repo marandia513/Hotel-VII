@@ -6,14 +6,32 @@
 	margin: 0px;
 }
 
+/*clase para mostrar imagenes*/
+img-responsive {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;  
+    margin: 0 auto;   
+}
+
+/*celulares pequeños*/
+@media (max-width: 600px) {
+    .img-responsive {
+        max-width: 100%; 
+    }
+}
+
 /* colores para usar: #1E2B3D (negro); #304562 (azul);#5695CE (celeste);#8291A3 (gris calro);#CBBBA1 (beige);#F7ECCF (crema);*/
+/*pantalla grande */
 @media screen and (min-width: 1024px) {
 	.parent {
 		/*tener cuidado con el grid-template-rows, no es recomendable usar la altura*/
 		background-color: #F7ECCF;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 0.15fr 0.2fr 0.5fr 0.6fr 1fr 0.8fr 0.8fr 0.7fr 0.5fr 0.5fr 0.3fr;
+	/*	grid-template-rows: 0.15fr 0.2fr 0.5fr 0.6fr 1fr 0.8fr 0.8fr 0.7fr 0.5fr 0.5fr 0.3fr;*/
+	grid-template-rows: 0.15fr 0.2fr 0.5fr 0.6fr 1fr 0.8fr 0.8fr 0.8fr 0.8fr 0.3fr 0.3fr;
 		/*agregue el carusel*/
 		/* maquetado*/
 		grid-template-areas:
@@ -295,9 +313,13 @@ button {
 
 /*estilo de la tercera seccion habitaciones*/
 .item1 {
-	grid-area: 5 / 1 / 5 / 2;
+	grid-area: 5 / 1 / 5 / 1 ;
+	height:auto;
+	width: 50%;
+	/*grid-area: 5 / 1 / span 5 / span 1;*/
+	display: block;
 	font-size: 1.5em;
-	padding: 0cqb 5px;
+	/*padding: 0cqb 5px;*/
 	/*alejar texto principal de los bordes*/
 	overflow: hidden;
 	/*para esconder el texto que se desborda*/
@@ -325,15 +347,22 @@ button {
 	}
 }
 
-/*seccion de habitaciones*/
-.detalle1 {
-	grid-area: 5 / 2 / 5 / 6;
+/*seccion de habitaciones fotos*/
+/*.detalle1 {
+	grid-area: 5 / 2 / 5 / 3;
 	display: block;
 	height: 100%;
 	width: 100%;
 	justify-content: space-around;
-	/*centrar las fotos ocupando todo el espacio*/
-	padding: 0px 5px;
+	padding: 0px 5px;*/
+
+.detalle1 {
+grid-area: 5 / 2 / 5 / 3 ;
+grid-gap: 2px; 
+grid-row-gap: 2px ;
+margin-bottom: 2px;
+margin-left: 2px;
+
 }
 
 /*estilo de las imagenes*/
@@ -341,7 +370,8 @@ button {
 	padding: 1% 0.5%;
 	width: auto;
 	/*ajusta el ancho de la imagen*/
-	height: 200px;
+	/*height: 200px;*/
+	height:auto;
 	/*ajusta el alto de la imagen*/
 }
 
@@ -352,14 +382,16 @@ button {
 }
 
 .item2 img {
-	width: 500px;
+	/*width: 500px;*/
+	width: auto;
 	height: auto;
 }
 
 .detalle2 {
 	grid-area: 6 / 4 / 6 / 5;
 	padding: 0px 5px;
-	font-size: 1.5 em;
+	display: flex;
+	font-size: 1.5em;
 	/*alejar texto principal de los bordes*/
 	overflow: hidden;
 	/*para esconder el texto que se desborda*/
@@ -371,6 +403,8 @@ button {
 .item3 {
 	grid-area: 7 / 1 / 7 / 3;
 	padding: 0% 5px;
+	display: flex;
+	font-size: 1.5em;
 	/*alejar texto principal de los bordes*/
 	overflow: hidden;
 	/*para esconder el texto que se desborda*/
@@ -384,34 +418,33 @@ button {
 }
 
 .detalle3 img {
-	width: 500px;
+	width: auto;
 	height: auto;
 }
 
-/*salón de ventos*/
+/*salón de eventos*/
 .item4 {
 	grid-area: 8 / 1 / 8 / 3;
 	padding: 0% 5px;
+	display: flex;
+	font-size: 1.5em;
 	/*alejar texto principal de los bordes*/
 	overflow: hidden;
 	/*para esconder el texto que se desborda*/
 	text-align: justify;
 }
 
-.item4 h3 {
-	font-size: 20px;
-}
-
+/*estilo de la imagen salon de eventos*/
 .detalle4 {
 	grid-area: 8 / 3 / 8 / 6;
 	padding: 0px 5px;
 }
 
 .detalle4 img {
-	width: 500px;
+	width: auto;
 	height: auto;
 }
-
+/*sobre hotel*/
 .item5 {
 	grid-area: 9 / 1 / 9 / 2;
 	padding: 25px;
@@ -614,11 +647,13 @@ button {
 
 /*compromiso de la empresa*/
 .item5 {
-	grid-area: 10 / 1 / 15 / 2;
+	/*grid-area: 10 / 1 / 15 / 2;*/
+	grid-area: 10 / 1 / 10 / 1;
 }
 
 .items5bis {
-	grid-area: 10 / 3 / 15 / 4;
+	/*grid-area: 10 / 3 / 15 / 4;*/
+	grid-area: 10 / 3 / 10 / 3;
 }
 
 .detalle5 {
