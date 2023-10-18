@@ -25,7 +25,6 @@ header {
     padding: 80px;
     border: 10px solid #ccc;
     border-radius: 5px;
-
     font-size: 15px;
     font-style: italic;
 }
@@ -141,4 +140,40 @@ td {
     height: 100%;
     background-color: #ccc;
     font-size: large;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 5px;
+    }
+
+    h1.h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    fieldset {
+        padding: 5px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"], textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        height: 150px;
+    }
 }
