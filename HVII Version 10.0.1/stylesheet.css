@@ -342,7 +342,7 @@ button {
 			'menu'
 			'carusel'
 			/*agregue el carusel*/
-			'encabezado1'
+			'ubicacionAPI'
 			'mpas-resposnive'
 			/*maps*/
 			'item1'
@@ -388,7 +388,7 @@ button {
 
 	}
 
-	.encabezado1 {
+	.ubicacionAPI {
 		grid-area: 4 / 1 / 4 / 2;
 	}
 
@@ -480,7 +480,7 @@ button {
 			'menu'
 			'carusel'
 			/*agregue el carusel*/
-			'encabezado1 encabezado2'
+			'ubicacionAPI'
 			/*maps*/
 			'item1 detalle1'
 			/*habitación*/
@@ -514,7 +514,7 @@ button {
 			'menu'
 			'carusel'
 			/*agregue el carusel*/
-			'encabezado1 encabezado2'
+			'ubicacionAPI'
 			/*maps*/
 			'item1 detalle1'
 			/*habitación*/
@@ -738,33 +738,19 @@ button {
 
 
 
-/*Estilo de la segunda sección*/
-.encabezado1 {
-	grid-area: 4 / 1 / 4 / 3;
-	text-align: center;
-	font-size: 1.5em;
-	padding: 25px;
-	/*alejar texto principal de los bordes*/
-	overflow: hidden;
-	/*para esconder el texto que se desborda*/
-}
 
 
 
 
 
 
-.encabezado1 {
-	grid-area: 4 / 1 / 4 / 3;
-}
 
 
 
 
-/*.encabezado2 {
-	grid-area: 4 / 3 / 4 / 6;
-	}
-/*agregue la ubicación del mapa en encabezado2*/
+
+
+
 
 
 .footer1 {
@@ -823,4 +809,16 @@ button {
 	color: #F7ECCF;
 	animation: 0.5s infinite boton-menu;
 	/*agrego boton para cambiar el estilo del menú*/
+}
+
+
+/*Estilo de la segunda sección*/
+.ubicacionAPI {
+	grid-area: 4 / 1 / 4 / 3;
+	text-align: center;
+	font-size: 1.5em;
+	padding: 25px;
+	/*alejar texto principal de los bordes*/
+	overflow: hidden;
+	/*para esconder el texto que se desborda*/
 }
