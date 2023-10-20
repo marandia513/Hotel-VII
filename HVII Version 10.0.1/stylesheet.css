@@ -339,7 +339,7 @@ button {
 			'logo'
 			'encabezado'
 			'login'
-			'nav'
+			'menu'
 			'carusel'
 			/*agregue el carusel*/
 			'encabezado1'
@@ -379,7 +379,7 @@ button {
 		grid-area: 1 / 1 / 1 / 2;
 	}
 
-	.nav {
+	.menu {
 		grid-area: 2 / 1 / 2 / 2;
 	}
 
@@ -477,7 +477,7 @@ button {
 		grid-template-rows: 0.3fr 0.3fr 0.5fr 0.8fr 0.5fr 0.5fr 0.5fr 0.51fr 0.51fr 0.51fr 0.5fr;
 		grid-template-areas:
 			'logo encabezado login'
-			'nav'
+			'menu'
 			'carusel'
 			/*agregue el carusel*/
 			'encabezado1 encabezado2'
@@ -511,7 +511,7 @@ button {
 		/* maquetado*/
 		grid-template-areas:
 			'logo encabezado login'
-			'nav'
+			'menu'
 			'carusel'
 			/*agregue el carusel*/
 			'encabezado1 encabezado2'
@@ -807,7 +807,7 @@ button {
 	text-decoration: none;
 }
 
-.nav {
+.menu {
 	grid-area: 2 / 1 / 2 / 4;
 	background-color: #304562;
 	font-size: 25px;
@@ -818,7 +818,7 @@ button {
 	position: relative;
 }
 /*---para cambiar el texto cuando paso con el mausse*/
-.nav a:hover {
+.menu a:hover {
 	background-color: #5695CE;
 	color: #F7ECCF;
 	animation: 0.5s infinite boton-menu;
