@@ -759,23 +759,7 @@ button {
 }
 
 
-.nav {
-	grid-area: 2 / 1 / 2 / 6;
-	background-color: #304562;
-	font-size: 25px;
-	align-self: center;
-	padding: 20px;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	position: relative;
-}
-/*---para cambiar el texto cuando paso con el mausse*/
-.nav a:hover {
-	background-color: #5695CE;
-	color: #F7ECCF;
-	animation: 0.5s infinite boton-menu;
-	/*agrego boton para cambiar el estilo del menú*/
-}
+
 
 /*.encabezado2 {
 	grid-area: 4 / 3 / 4 / 6;
@@ -786,9 +770,7 @@ button {
 .footer1 {
 	grid-area: 12 / 1 / 12 / 4;
 }
-.nav {
-	grid-area: 2 / 1 / 2 / 4;
-}
+
 /*estilo de footer*/
 .footer1 {
 	grid-area: 11 / 1 / 11 / 6;
@@ -823,4 +805,22 @@ button {
 	color: #304562;
 	font-size: 25px;
 	text-decoration: none;
+}
+
+.nav {
+	grid-area: 2 / 1 / 2 / 4;
+	background-color: #304562;
+	font-size: 25px;
+	align-self: center;
+	padding: 20px;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	position: relative;
+}
+/*---para cambiar el texto cuando paso con el mausse*/
+.nav a:hover {
+	background-color: #5695CE;
+	color: #F7ECCF;
+	animation: 0.5s infinite boton-menu;
+	/*agrego boton para cambiar el estilo del menú*/
 }
