@@ -116,6 +116,7 @@
 
 		<!--ubicacionAPI-->
 		<div class="ubicacionAPI">
+
 			<article>
 					<p>Ubicado en el corazón del sur argentino, en la pintoresca Villa La Angostura, <br><br>
 					HVII te invita a sumergirte en una experiencia única de lujo, confort y naturaleza. <br>
@@ -123,58 +124,57 @@
 					mundial para brindarte una estancia inolvidable.</p>
 			</article>
 
-
 			<!--API-->
-		 	<div id="contenido" class="clima2">
-		 	<!-- Aquí insertaremos contenido que recuperamos mediante la API -->
-			 </div>
+			<div class="clima" id="contenido">
+				<!-- Aquí insertaremos contenido que recuperamos mediante la API -->
+			</div>
+
+			<!-- ubicacion google maps -->
+			<div class="maps-responsive">				
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1510.5159262026903!2d-71.65978509445551!3d-40.783313885354175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1696421656162!5m2!1ses!2sar"
+					width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+				</iframe>
+			</div>
+
 		</div>
 
 
-		<!-- ubicacion google maps -->
-		<div class="maps-responsive">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1510.5159262026903!2d-71.65978509445551!3d-40.783313885354175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1696421656162!5m2!1ses!2sar"
-				width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
+
 		<div class="item1">
-			<div class="cualquiera">
-			<article id="2">
-				<h3>Habitaciones - Refugios de Serenidad y Elegancia</h3>
-				<p>Descubre la serenidad en nuestras habitaciones exquisítamente diseñadas, donde el lujo y la comodidad
-					se entrelazan en perfecta armonía. Cada habitación ofrece vistas impresionantes de los majestuosos
-					alrededores naturales y está equipada con las comodidades más modernas. Desde las habitaciones
-					estándar hasta las suites presidenciales, cada espacio está meticulosamente decorado para satisfacer
-					incluso los gustos más exigentes.</p>
-			</article>
-			<br>
-			<!-- <a class="reserva" href="reservationform.html">Reservas</a>-->
+				<article id="2">
+					<h3>Habitaciones - Refugios de Serenidad y Elegancia</h3>
+					<p>Descubre la serenidad en nuestras habitaciones exquisítamente diseñadas, donde el lujo y la comodidad
+						se entrelazan en perfecta armonía. Cada habitación ofrece vistas impresionantes de los majestuosos
+						alrededores naturales y está equipada con las comodidades más modernas. Desde las habitaciones
+						estándar hasta las suites presidenciales, cada espacio está meticulosamente decorado para satisfacer
+						incluso los gustos más exigentes.</p>
+				</article>
 		</div>
-		</div>
+
+		<!---imagenes de habitaciones-->
 		<div class="detalle1">
-				<div clas="img-responsive">
-			<!---imagenes de habitaciones-->
-			<img src="img/hab/hab1.jpg" alt="Habitación de lujo">
-			<img src="img/hab/hab2.jpg" alt="Habitación classic">
-			<img src="img/hab/hab3.jpg" alt="habitaciones">
-			<img src="img/hab/hab4.jpg" alt="Baño del hotel">
-			<img src="img/hab/hab5.jpg" alt="Habitación classic">
-			<img src="img/hab/hab6.jpg" alt="habitaciones">
+			<div clas="img-responsive">
+				<img src="img/hab/hab1.jpg" alt="Habitación de lujo">
+				<img src="img/hab/hab2.jpg" alt="Habitación classic">
+				<img src="img/hab/hab3.jpg" alt="habitaciones">
+				<img src="img/hab/hab4.jpg" alt="Baño del hotel">
+				<img src="img/hab/hab5.jpg" alt="Habitación classic">
+				<img src="img/hab/hab6.jpg" alt="habitaciones">
 			</div>
 		</div>
-		<!--<div class="item2">
-			imagen de restaurante 
-			<img src="img/Rest/restaurant1.jpg" alt="Restaurante del hotel">
-		</div> -->
+
+		<!---imagenes de restaurant-->
+		<div class="detalle2">
+			<div clas="img-responsive">
+				<img src="img/hab/hab1.jpg" alt="Habitación de lujo">
+				<img src="img/hab/hab2.jpg" alt="Habitación classic">
+				<img src="img/hab/hab3.jpg" alt="habitaciones">
+				<img src="img/hab/hab4.jpg" alt="Baño del hotel">
+			</div>
+		</div>
 
 		<div class="item2">
-			<!--imagen de restaurante-->
-			<div class="img-responsive">
-				<img src="img/Rest/restaurant1.jpg" alt="Restaurante del hotel">
-			</div>
-			
-		</div>
-		<div class="detalle2">
 			<article id="3">
 				<h3>Restaurantes - Delicias Culinarias en Cada Bocado</h3>
 				<p>Nuestros restaurantes son destinos en sí mismos, donde los sabores locales se fusionan con la alta
@@ -183,6 +183,7 @@
 					una experiencia sensorial que refleja la pasión por la excelencia culinaria.</p>
 			</article>
 		</div>
+
 		<div class="item3">
 			<article id="4">
 				<h3>Spa - Renovación y Relajación Profunda</h3>
@@ -195,10 +196,19 @@
 				</p>
 			</article>
 		</div>
-		<div class="detalle3">
-			<img src="img/spa/07.jpg" alt="imagen de spa" rel="nofollow">
-			<h3>¡No te pierdas del sevicio exclusivo en nuestro spa!</h3>
-		</div>
+
+
+				<!---imagenes de spa-->
+				<div class="detalle3">
+					<h3>¡No te pierdas del sevicio exclusivo en nuestro spa!</h3>
+					<div clas="img-responsive">
+						<img src="img/hab/hab1.jpg" alt="Habitación de lujo">
+						<img src="img/hab/hab2.jpg" alt="Habitación classic">
+						<img src="img/hab/hab3.jpg" alt="habitaciones">
+						<img src="img/hab/hab4.jpg" alt="Baño del hotel">
+					</div>
+				</div>
+
 		<div class="item4">
 			<article id="5">
 				<h3>Salones y Eventos - Elegancia para Cada Ocasión</h3>
@@ -208,13 +218,23 @@
 					éxito de tu evento.</p>
 			</article>
 		</div>
+		
+
+		<!---imagenes de salones-->
 		<div class="detalle4">
-			<img src="img/salon.jpg" alt="imagen de salón de eventos" rel="nofollow">	
+			<div clas="img-responsive">
+				<img src="img/hab/hab1.jpg" alt="Habitación de lujo">
+				<img src="img/hab/hab2.jpg" alt="Habitación classic">
+				<img src="img/hab/hab3.jpg" alt="habitaciones">
+				<img src="img/hab/hab4.jpg" alt="Baño del hotel">
+
+			</div>
 		</div>
+
+
+
+
 		<div class="item5">
-			<img src="img/exc/travellers choice 2022.jpg" alt="logo travellers choice" rel="nofollow">
-		</div>
-		<div class="detalle5">
 			<article id="5">
 				<h3>HVII La Empresa - Compromiso con la Excelencia</h3>
 				<p>En HVII, nuestra pasión por brindar experiencias excepcionales impulsa cada aspecto de nuestra
@@ -223,11 +243,16 @@
 					recuerdos inolvidables para cada huésped que cruza nuestras puertas.</p>
 			</article>
 		</div>
-		<div class="items5bis">
-		<img src="img/exc/iso9001.jpg" alt="Logo iso 9001">	
-		<img src="img/exc/logoeco.jpg" alt="Logo de certificación">	
+
+		<div class="detalle5">
+			<img src="img/exc/travellers choice 2022.jpg" alt="logo travellers choice" rel="nofollow">
+		<!-- <img src="img/exc/iso9001.jpg" alt="Logo iso 9001">	 -->
+		<!-- <img src="img/exc/logoeco.jpg" alt="Logo de certificación">	 -->
 		<!--aca se podría agregar otro logo de certificación hotelera -->
 		</div>
+
+
+
 		<div class="item6">
 			<article id="6">
 				<h3>Contacto - Únete a la Experiencia HVII</h3>
@@ -238,6 +263,7 @@
 			</article>
 			<a class="button" href="contactsform.html"> Formulario de contacto </a>
 		</div>
+
 		<div class="footer1">
 			HVII | 2023
 			<br><br>
