@@ -11,13 +11,13 @@
 </head>
     <body>    
         <header>
-            <h1 class="h1">
+        <h1 class="h1">
                 CONTACTO HVII
-            </h1>
+        </h1>
         </header>
         <div class="containerform">
             <fieldset>
-                <legend>Tipos de habitaciones</legend>
+                <legend>Tipos de reserva</legend>
                     <form action="#" >                            
                         <select name="habitacion" id="habitacion">
                             <option value="1"> habitación</option>
@@ -31,8 +31,9 @@
             <fieldset>
                 <legend>Contactenos</legend>
                 <form action="showdata.html" target="_blank">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre">
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="Nombre" onkeypress="mayus(this)">    
+                <input type="text" onkeypress="mayus(this);">
                 <label for="mail">Correo electronico:</label>
                 <input type="email" id="mail" name="Mail"  required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
                 <label for="comentario">Comentarios:</Label>

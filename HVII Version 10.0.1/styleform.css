@@ -25,14 +25,11 @@ header {
     padding: 80px;
     border: 10px solid #cccccc;
     border-radius: 5px;
-   /* font-size: 15px;*/
-   font-size: 25px;
+    font-size: 25px;
     font-style: italic;
 }
 
 select {
-    /*font-size: 15px;*/
-    font-size: 25px;
     display: block;
     font-weight: lighter;
     width: 100%;
@@ -49,20 +46,19 @@ label {
     font-style: normal;
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="date"],
-input[type="number"],
-input[type="email"] {
+input
+{
     width: 95%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #CBBBA1;
+    border: 1px solid #F7ECCF;
     border-radius: 5px;
-    /*font-size: 15px;*/
-    font-size: 25px;
+   
 }
-
+textarea
+{
+    width: 100%;  
+}
 /*diseño de boton de enviar / borrar*/
 button {
     background-color: #5695CE;
@@ -117,7 +113,7 @@ a {
 .th,
 td {
     border: 1px solid #304562;
-    /* Establece un borde sólido de 1 píxel de ancho y color negro */
+    /* Establece un borde sólido de 1 píxel de ancho y color */
     padding: 10px;
     /* Añade un espacio de relleno alrededor del contenido de las celdas */
 }
