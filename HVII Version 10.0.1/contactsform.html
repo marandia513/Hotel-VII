@@ -11,7 +11,8 @@
 </head>
     <body>    
         <header>
-        <h1 class="h1">
+        <!--<h1 class="h1"> -->
+        <h1>
                 CONTACTO HVII
         </h1>
         </header>
@@ -33,7 +34,7 @@
                 <form action="showdata.html" target="_blank">
                 <label for="nombre">Nombre y Apellido:</label>
                 <input type="text" id="nombre" name="Nombre" onkeypress="mayus(this)">    
-                <input type="text" onkeypress="mayus(this);">
+                <input type="text" id="apellido" name="Apellido" onkeypress="mayus(this);">
                 <label for="mail">Correo electronico:</label>
                 <input type="email" id="mail" name="Mail"  required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
                 <label for="comentario">Comentarios:</Label>
@@ -41,7 +42,7 @@
                     <textarea name="comentario" id="comentario" cols="45"rows="10">Ingrese su consulta en breve nos comunicaremos con Ud. </textarea>
                 <br><br>
                 </fieldset>        
-                <fieldset>
+                <fieldset> 
                     <button type="submit">Enviar</button>
                     <button type="reset">Borrar</button>
                     <br><br>

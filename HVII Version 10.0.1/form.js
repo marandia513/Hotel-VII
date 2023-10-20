@@ -24,3 +24,8 @@ fechaIngreso.addEventListener("change", function () {
 });
 
 } 
+// convertir un campo a mayusculas
+function mayus(nombreCampo) {
+    var campo = document.getElementById(nombreCampo);
+    campo.value = campo.value.toUpperCase();
+  }
