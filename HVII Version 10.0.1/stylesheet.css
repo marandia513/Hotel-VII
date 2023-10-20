@@ -336,34 +336,26 @@ button {
 		grid-template-columns: 1fr;
 		grid-template-rows: 0.1fr 0.1fr 0.3fr 0.8fr 0.3fr 0.7fr 0.7fr 0.6fr 0.7fr 0.6fr 1fr 0.8fr 0.5fr 0.1fr 0.2fr 0.2fr 0.1fr 0.1fr;
 		grid-template-areas:
-			'logo'
-			'encabezado'
-			'login'
-			'menu'
-			'carusel'
-			/*agregue el carusel*/
-			'ubicacionAPI'
-			'mpas-resposnive'
-			/*maps*/
-			'item1'
-			'detalle1'
-			/*habitación*/
-			'item2'
-			'detalle2'
-			/*Restaurante*/
-			'item3' '
- 			'detalle3'
-			/*spa*/
-			'item4'
-			'detalle4'
-			/*salón*/
-			'item5'
-			'detalle5'
-			/*compromiso de la empresa*/
-			'item6'
-			'detalle6'
-			/*contacto*/
-			'footer1';
+			/*01*/'logo'
+			/*02*/'encabezado'
+			/*03*/'login'
+			/*04*/'menu'
+			/*05*/'carusel'/*agregue el carusel*/
+			/*06*/'ubicacionAPI'
+			/*07*/'mpas-resposnive'/*maps*/
+			/*08*/'item1'
+			/*09*/'detalle1'/*habitación*/
+			/*10*/'item2'
+			/*11*/'detalle2'/*Restaurante*/
+			/*12*/'item3' '
+ 			/*13*/'detalle3'/*spa*/
+			/*14*/'item4'
+			/*15*/'detalle4'/*salón*/
+			/*16*/'item5'
+			/*17*/'detalle5'/*compromiso de la empresa*/
+			/*18*/'item6'
+			/*19*/'detalle6'/*contacto*/
+			/*20*/'footer1';
 	}
 
 	.logo {
@@ -374,7 +366,6 @@ button {
 		display: none;
 	}
 
-	
 	.encabezado {
 		grid-area: 1 / 1 / 1 / 2;
 	}
@@ -475,26 +466,19 @@ button {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 0.3fr 0.3fr 0.5fr 0.8fr 0.5fr 0.5fr 0.5fr 0.51fr 0.51fr 0.51fr 0.5fr;
+
 		grid-template-areas:
-			'logo encabezado login'
-			'menu'
-			'carusel'
-			/*agregue el carusel*/
-			'ubicacionAPI'
-			/*maps*/
-			'item1 detalle1'
-			/*habitación*/
-			'item2 detalle2'
-			/*Restaurante*/
-			'item3 detalle3'
-			/*spa*/
-			'item4 detalle4'
-			/*salón*/
-			'item5 detalle5'
-			/*compromiso de la empresa*/
-			'item6'
-			/*contacto*/
-			'footer1';
+			/*01*/'logo encabezado login'
+			/*02*/'menu'
+			/*03*/'carusel'/*agregue el carusel*/
+			/*04*/'ubicacionAPI'/*maps*/
+			/*05*/'item1 detalle1'/*habitación*/
+			/*06*/'item2 detalle2'/*Restaurante*/
+			/*07*/'item3 detalle3'/*spa*/
+			/*08*/'item4 detalle4'/*salón*/
+			/*09*/'item5 detalle5'/*compromiso de la empresa*/
+			/*10*/'item6 detalle6'/*contacto*/
+			/*11*/'footer1';
 	}
 }
 
@@ -510,25 +494,17 @@ button {
 		/*agregue el carusel*/
 		/* maquetado*/
 		grid-template-areas:
-			'logo encabezado login'
-			'menu'
-			'carusel'
-			/*agregue el carusel*/
-			'ubicacionAPI'
-			/*maps*/
-			'item1 detalle1'
-			/*habitación*/
-			'item2 detalle2'
-			/*Restaurante*/
-			'item3 detalle3'
-			/*spa*/
-			'item4 detalle4'
-			/*salón*/
-			'item5 detalle5'
-			/*compromiso de la empresa*/
-			'item6 detalle6'
-			/*contacto*/
-			'footer1';
+			/*01*/'logo encabezado login'
+			/*02*/'menu'
+			/*03*/'carusel'/*agregue el carusel*/
+			/*04*/'ubicacionAPI'/*maps*/
+			/*05*/'item1 detalle1'/*habitación*/
+			/*06*/'item2 detalle2'/*Restaurante*/
+			/*07*/'item3 detalle3'/*spa*/
+			/*08*/'item4 detalle4'/*salón*/
+			/*09*/'item5 detalle5'/*compromiso de la empresa*/
+			/*10*/'item6 detalle6'/*contacto*/
+			/*11*/'footer1';
 	}
 }
 
@@ -734,25 +710,6 @@ button {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer1 {
 	grid-area: 12 / 1 / 12 / 4;
 }
@@ -814,7 +771,7 @@ button {
 
 /*Estilo de la segunda sección*/
 .ubicacionAPI {
-	grid-area: 4 / 1 / 4 / 3;
+	grid-area: 4 / 1 / 4 / 4;
 	text-align: center;
 	font-size: 1.5em;
 	padding: 25px;
