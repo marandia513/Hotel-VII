@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,30 +15,30 @@
                 CONTACTO HVII
             </h1>
         </header>
-        <div class="container">
+        <div class="containerform">
+            <fieldset>
+                <legend>Tipos de habitaciones</legend>
+                    <form action="#" >                            
+                        <select name="habitacion" id="habitacion">
+                            <option value="1"> habitación</option>
+                            <option value="2"> spa</option>
+                            <option value="3"> gym</option>
+                            <option value="4"> salon</option>
+                            <option value="5"> otros</option>
+                        </select>
+                    </form>
+            </fieldset>
             <fieldset>
                 <legend>Contactenos</legend>
-                <form action="showdata.html">
-                    <input type="radio" name="servicio" id="habitación" value="1"> Habitaciones
-                    <input type="radio" name="servicio" id="spa" value="2"> Spa
-                    <input type="radio" name="servicio" id="gym" value="3"> Gym
-                    <input type="radio" name="servicio" id="salon" value="4">Salón de eventos
-                    <input type="radio" name="otros" id="otros" value="5">Otros
-              
-                </fieldset>
-                    <br>
-                <fieldset>
-                        <legend>Datos de contacto </legend>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre">
-                    <br> <br>
-                        <label for="nombre">Correo electronico:</label>
-                        <input type="text" name="nombre">
-                    <br><br>
-                        <Label for="comentario">Comentarios:</Label>
-                    <br>
-                        <textarea name="comentario" id="comentario" cols="45"rows="10">Ingrese su consulta en breve nos comunicaremos con Ud. </textarea>
-                    <br><br>
+                <form action="showdata.html" target="_blank">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre">
+                <label for="mail">Correo electronico:</label>
+                <input type="email" id="mail" name="Mail"  required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+                <label for="comentario">Comentarios:</Label>
+                <br>
+                    <textarea name="comentario" id="comentario" cols="45"rows="10">Ingrese su consulta en breve nos comunicaremos con Ud. </textarea>
+                <br><br>
                 </fieldset>        
                 <fieldset>
                     <button type="submit">Enviar</button>

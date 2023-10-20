@@ -17,20 +17,22 @@ header {
 }
 
 /* Estilos para cada elemento de la lista*/
-.container {
+.containerform {
     background-color: #304562;
     color: #CBBBA1;
     max-width: 600px;
     margin: 0 auto;
     padding: 80px;
-    border: 10px solid #ccc;
+    border: 10px solid #cccccc;
     border-radius: 5px;
-    font-size: 15px;
+   /* font-size: 15px;*/
+   font-size: 25px;
     font-style: italic;
 }
 
 select {
-    font-size: 15px;
+    /*font-size: 15px;*/
+    font-size: 25px;
     display: block;
     font-weight: lighter;
     width: 100%;
@@ -57,7 +59,8 @@ input[type="email"] {
     margin-bottom: 20px;
     border: 1px solid #CBBBA1;
     border-radius: 5px;
-    font-size: 15px;
+    /*font-size: 15px;*/
+    font-size: 25px;
 }
 
 /*diseño de boton de enviar / borrar*/
@@ -68,7 +71,8 @@ button {
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 15px;
+    /*font-size: 15px;*/
+    font-size: 20px;
 }
 
 /*diseño del boton volver*/
@@ -139,41 +143,5 @@ td {
     width: 100%;
     height: 100%;
     background-color: #ccc;
-    font-size: large;
-}
-
-fieldset {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-/* Responsive styles */
-@media only screen and (max-width: 600px) {
-    .container {
-        padding: 5px;
-    }
-
-    h1.h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    fieldset {
-        padding: 5px;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    input[type="text"], textarea {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    textarea {
-        height: 150px;
-    }
+    font-size: 25px;
 }
