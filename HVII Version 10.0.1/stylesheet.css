@@ -526,7 +526,9 @@ button {
 	margin-right: 10em;
 	margin-bottom: 1em;
 	padding: 1em;
-
+	display: inline-block;
+	align-content: center;
+	
 
     /* width: fit-content; */ 
     /* border-radius: 3px; */
