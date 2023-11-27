@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <!-- Enlace a tu JavaScript personalizado -->
+  <script src="reservaja.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Registro de Usuario</h2>
+    <form id="registroForm" action="/registro" method="post" class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="username">Usuario:</label>
+        <input type="text" class="form-control" name="username" id="username" required>
+        <div class="invalid-feedback">
+          Por favor, ingresa un nombre de usuario.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" class="form-control" name="password" id="password" required minlength="8">
+        <div class="invalid-feedback">
+          La contraseña debe tener al menos 8 caracteres.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirmar Contraseña:</label>
+        <input type="password" class="form-control" name="confirm_password" id="confirm_password" required minlength="8">
+        <div class="invalid-feedback">
+          Por favor, confirma tu contraseña.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+  </div>
+</body>
+</html>

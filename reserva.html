@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reserva</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Enlace a tu CSS personalizado nos falta hacer esto chicas-->
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="reservajava.js"></script> 
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>Reserva</h2>
+    <form action="/submit_reserva" method="post" class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Tu apellido" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@correo.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contacto">Contacto:</label>
+        <input type="text" class="form-control" id="contacto" name="contacto" placeholder="Número de contacto">
+      </div>
+     
+      <div class="form-group">
+        <label for="tipo_habitacion">Tipo de Habitación:</label>
+        <select class="form-control" id="tipo_habitacion" name="tipo_habitacion" required>
+          <option value="">Selecciona un tipo</option>
+          <option value="individual">Individual</option>
+          <option value="doble">Doble</option>
+          <option value="suite">Suite</option>
+          <!-- Agrega más opciones según sea necesario--- pero revisen porque capaz estoy mal -->
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="fecha_entrada">Fecha Entrada:</label>
+        <input type="date" class="form-control" id="fecha_entrada" name="fecha_entrada" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_salida">Fecha Salida:</label>
+        <input type="date" class="form-control" id="fecha_salida" name="fecha_salida" required>
+      </div>
+
+      <div class="form-group">
+        <label for="can_may">Cantidad de Adultos:</label>
+        <input type="number" class="form-control" id="can_may" name="can_may" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="can_men">Cantidad de Menores:</label>
+        <input type="number" class="form-control" id="can_men" name="can_men" min="0" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
